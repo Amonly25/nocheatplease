@@ -41,6 +41,10 @@ public class PlayerMoveListener implements Listener{
             ModifiedBlock modifiedBlock = iterator.next();
             Location location = modifiedBlock.getLocation();
             
+            if (location.getWorld().equals(player.getWorld()) == false) {
+                continue;
+            }
+
             if (player.getLocation().distance(location) < 32) {
                 Block block = location.getBlock();
                 // plugin.getLogger().info("Player is near the block at x " + location.getBlockX() + 
