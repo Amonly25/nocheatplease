@@ -1,0 +1,12 @@
+main: com.ar.askgaming.NoCheatPlease
+name: NoCheatPlease
+version: 1.0
+api-version: 1.21
+author: AskGaming
+description: NoCheatPlease
+commands:
+  ncp:
+    description: NoCheatPlease
+    usage: /ncp
+    permission: nocheatplease.use
+    aliases: [ncp]
