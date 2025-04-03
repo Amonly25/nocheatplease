@@ -27,12 +27,13 @@ public class PlayerMoveListener implements Listener{
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent event) {
         Player player = event.getPlayer();
+
+        if (event.getFrom().getBlockX() == event.getTo().getBlockX() && event.getFrom().getBlockY() == event.getTo().getBlockY() && event.getFrom().getBlockZ() == event.getTo().getBlockZ()) {
+            return;
+        }
         List<ModifiedBlock> blocks = plugin.getESPController().getModifiedblocks().get(player);
         
         if (blocks == null || blocks.isEmpty()) {
-            return;
-        }
-        if (event.getFrom().getBlockX() == event.getTo().getBlockX() && event.getFrom().getBlockY() == event.getTo().getBlockY() && event.getFrom().getBlockZ() == event.getTo().getBlockZ()) {
             return;
         }
     
