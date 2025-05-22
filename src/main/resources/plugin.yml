@@ -4,6 +4,7 @@ version: 1.0
 api-version: 1.21
 author: AskGaming
 description: NoCheatPlease
+depend: [packetevents]
 commands:
   ncp:
     description: NoCheatPlease
